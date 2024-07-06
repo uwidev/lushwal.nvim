@@ -89,10 +89,10 @@ local scheme = lush(function()
 		Type({ fg = colors.yellow }),
 		Typedef({ fg = colors.yellow }),
 
-		SpellBad({ gui = "underline", fg = colors.red, sp = colors.red }),
-		SpellLocal({ gui = "underline", fg = colors.cyan, sp = colors.cyan }),
-		SpellCap({ gui = "underline", fg = colors.yellow, sp = colors.yellow }),
-		SpellRare({ gui = "underline", fg = colors.purple, sp = colors.purple }),
+		SpellBad({ gui = "underline", fg = colors.color6, sp = colors.color6 }),
+		SpellLocal({ gui = "underline", fg = colors.color5, sp = colors.color5 }),
+		SpellCap({ gui = "underline", fg = colors.color4, sp = colors.color4 }),
+		SpellRare({ gui = "underline", fg = colors.color3, sp = colors.color3 }),
 
 		StatusLine({ fg = colors.white, bg = colors.br_black }),
 		StatusLineNC({ fg = colors.grey, bg = colors.br_black }),
