@@ -71,7 +71,7 @@ local function generate_colors()
 			br_cyan = color14,
 			br_white = color15,
 			-- Special colors:
-			subtle = color0.mix(color7, 3),
+			subtle = background.mix(color0, 16).mix(color8, 8),
 			grey = color0.mix(color7, 30), -- Darker mid-grey
 			br_grey = color8.mix(color15, 65), -- Mid-grey
 			orange = color1.mix(color3, 50),
