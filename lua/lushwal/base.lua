@@ -18,7 +18,7 @@ local scheme = lush(function()
 		ErrorMsg({ fg = colors.red, bg = colors.background }),
 		Exception({ fg = colors.red }),
 		FoldColumn({ fg = colors.blue, bg = colors.background }),
-		Folded({ fg = colors.white, bg = colors.br_black, gui = "italic" }),
+		Folded({ fg = colors.white, bg = colors.subtle, gui = "italic" }),
 		IncSearch({ fg = colors.br_black, bg = colors.orange }),
 
 		VertSplit({ fg = colors.white, bg = colors.background }),
