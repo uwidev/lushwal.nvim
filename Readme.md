@@ -26,6 +26,7 @@ You can use `opt=true` because this plugin calls `packadd` when it needs lush an
 		{ "rktjmp/lush.nvim" },
 		{ "rktjmp/shipwright.nvim" },
 	},
+	lazy = false,
 }
 ```
 
@@ -53,9 +54,11 @@ Set `vim.g.lushwal_configuration` (in Lua) or `g:lushwal_configuration` (in Vims
 
 ~~~lua
 {
+	transparent_background = false,
 	compile_to_vimscript = true,
 	terminal_colors = false,
 	color_overrides = nil,
+	wal_path = vim.fn.expand("XDG_CACHE_HOME/wal/colors.json"),
 	addons = {
 		ale = false,
 		barbar = false,

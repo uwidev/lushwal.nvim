@@ -1,6 +1,7 @@
 -- luacheck: globals vim
 local hsl = require("lush").hsl
-local xdg = require("lushwal.utils.xdg")
+
+local config = require("lushwal").config
 
 -- Decode some JSON:
 local json_decode = function(data)
@@ -8,14 +9,14 @@ local json_decode = function(data)
 end
 
 -- Locate pywal cache:
-local wal_path = xdg("XDG_CACHE_HOME") .. "/wal/colors.json"
 local function generate_colors()
-	local ok, colors = json_decode(vim.fn.readfile(wal_path))
+	local ok, colors = json_decode(vim.fn.readfile(config.wal_path))
 
 	-- Generate Color Variables:
 	if ok then
 		local foreground = hsl(colors.special.foreground)
-		local background = hsl(colors.special.background)
+		local background = not require("lushwal").config.transparent_background and hsl(colors.special.background)
+			or nil
 		local cursor = hsl(colors.special.cursor)
 		local color0 = hsl(colors.colors.color0)
 		local color1 = hsl(colors.colors.color1)
