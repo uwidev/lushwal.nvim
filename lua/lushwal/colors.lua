@@ -71,6 +71,7 @@ local function generate_colors()
 			br_magenta = color13,
 			br_cyan = color14,
 			br_white = color15,
+
 			-- Special colors:
 			subtle10 = background.mix(color0, 10),
 			subtle25 = background.mix(color0, 25),
@@ -78,6 +79,14 @@ local function generate_colors()
 			subtle50 = background.mix(color0, 50),
 			subtle66 = background.mix(color0, 66),
 			subtle75 = background.mix(color0, 75),
+
+			subtle_red = background.mix(color1, 10).saturate(20).darken(10),
+			subtle_green = background.mix(color2, 10).saturate(20).darken(10),
+			subtle_yellow = background.mix(color3, 10).saturate(20).darken(10),
+			subtle_blue = background.mix(color4, 10).saturate(20).darken(10),
+			subtle_magenta = background.mix(color5, 10).saturate(20).darken(10),
+			subtle_cyan = background.mix(color6, 10).saturate(20).darken(10),
+
 			grey = color0.mix(color7, 30), -- Darker mid-grey
 			br_grey = color8.mix(color15, 65), -- Mid-grey
 			orange = color1.mix(color3, 50),
