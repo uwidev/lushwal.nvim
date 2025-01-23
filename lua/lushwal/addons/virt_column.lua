@@ -5,7 +5,7 @@ local colors = require("lushwal").colors
 return lush(function()
 	-- selene: allow(undefined_variable)
 	return {
-		VirtColumn({ fg = colors.subtle }),
+		VirtColumn({ fg = colors.subtle33 }),
 	}
 	-- selene: deny(undefined_variable)
 end)
