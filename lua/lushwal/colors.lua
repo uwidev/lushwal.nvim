@@ -72,7 +72,7 @@ local function generate_colors()
 			br_cyan = color14,
 			br_white = color15,
 
-			-- Special colors:
+			-- Special colors
 			subtle10 = background.mix(color0, 10),
 			subtle25 = background.mix(color0, 25),
 			subtle33 = background.mix(color0, 33),
@@ -80,6 +80,7 @@ local function generate_colors()
 			subtle66 = background.mix(color0, 66),
 			subtle75 = background.mix(color0, 75),
 
+			-- Subtle variants, blend with background
 			subtle_red = background.mix(color1, 10).saturate(20).darken(10),
 			subtle_green = background.mix(color2, 10).saturate(20).darken(10),
 			subtle_yellow = background.mix(color3, 10).saturate(20).darken(10),
@@ -87,6 +88,15 @@ local function generate_colors()
 			subtle_magenta = background.mix(color5, 10).saturate(20).darken(10),
 			subtle_cyan = background.mix(color6, 10).saturate(20).darken(10),
 
+			-- Harsh variants, blend with bright black
+			harsh_red = color8.mix(color9, 10).saturate(10).darken(40),
+			harsh_green = color8.mix(color10, 10).saturate(10).darken(40),
+			harsh_yellow = color8.mix(color11, 10).saturate(10).darken(40),
+			harsh_blue = color8.mix(color12, 10).saturate(10).darken(40),
+			harsh_magenta = color8.mix(color13, 10).saturate(10).darken(40),
+			harsh_cyan = color8.mix(color14, 10).saturate(10).darken(40),
+
+			-- Else...
 			grey = color0.mix(color7, 30), -- Darker mid-grey
 			br_grey = color8.mix(color15, 65), -- Mid-grey
 			orange = color1.mix(color3, 50),
