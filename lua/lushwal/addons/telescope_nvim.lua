@@ -8,7 +8,7 @@ return lush(function()
 		TelescopeBorder({ fg = colors.br_grey }),
 		TelescopePromptBorder({ fg = colors.br_grey }),
 		TelescopeSelectionCaret({ fg = colors.br_cyan }),
-		TelescopeSelection({ fg = colors.br_cyan, bg = colors.br_black }),
+		TelescopeSelection({ fg = colors.foreground, bg = colors.blue }),
 		TelescopeMatching({ fg = colors.br_yellow }),
 		TelescopePromptCounter({ fg = colors.blue }),
 		TelescopeMultiSelection({ fg = colors.yellow, gui = "bold" }),
