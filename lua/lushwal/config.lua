@@ -41,5 +41,9 @@ return {
 		vim_sneak = false,
 		which_key_nvim = false,
 		neorg = true,
+		dev = true,
+		lsp = true,
+		virt_column = true,
+		python = true,
 	},
 }

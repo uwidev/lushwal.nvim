@@ -49,6 +49,7 @@ M.reload_colors = function()
 	local cfg = M.config
 	pcall(vim.cmd, "packadd lush.nvim")
 	colors = require("lushwal.colors")()
+	-- print(vim.inspect(colors))
 	if type(cfg.color_overrides) == "function" then
 		local ok, c = pcall(cfg.color_overrides, colors)
 		if ok then

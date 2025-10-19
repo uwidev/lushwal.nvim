@@ -34,6 +34,7 @@ local function generate_colors()
 		local color13 = hsl(colors.colors.color13)
 		local color14 = hsl(colors.colors.color14)
 		local color15 = hsl(colors.colors.color15)
+		local grey = background.mix(foreground, 50)
 
 		return {
 			foreground = foreground,
@@ -73,32 +74,124 @@ local function generate_colors()
 			br_white = color15,
 
 			-- Special colors
-			subtle10 = background.mix(color0, 10),
-			subtle25 = background.mix(color0, 25),
-			subtle33 = background.mix(color0, 33),
-			subtle50 = background.mix(color0, 50),
-			subtle66 = background.mix(color0, 66),
-			subtle75 = background.mix(color0, 75),
+			-- Be careful of mixing 0 and background, might be the same color
+			subtle1 = background.mix(color7, 1),
+			subtle2 = background.mix(color7, 2),
+			subtle3 = background.mix(color7, 3),
+			subtle5 = background.mix(color7, 5),
+			subtle10 = background.mix(color7, 10),
 
-			-- Subtle variants, blend with background
-			subtle_red = background.mix(color1, 10).saturate(20).darken(10),
-			subtle_green = background.mix(color2, 10).saturate(20).darken(10),
-			subtle_yellow = background.mix(color3, 10).saturate(20).darken(10),
-			subtle_blue = background.mix(color4, 10).saturate(20).darken(10),
-			subtle_magenta = background.mix(color5, 10).saturate(20).darken(10),
-			subtle_cyan = background.mix(color6, 10).saturate(20).darken(10),
+			-- background mixed with colors
+			-- somewhat perceptual difference from background
+			back_red = background.mix(color1, 33),
+			back_green = background.mix(color2, 33),
+			back_yellow = background.mix(color3, 33),
+			back_blue = background.mix(color4, 33),
+			back_magenta = background.mix(color5, 33),
+			back_cyan = background.mix(color6, 33),
+			back_white = background.mix(color7, 33),
+
+			back_color1 = background.mix(color1, 33),
+			back_color2 = background.mix(color2, 33),
+			back_color3 = background.mix(color3, 33),
+			back_color4 = background.mix(color4, 33),
+			back_color5 = background.mix(color5, 33),
+			back_color6 = background.mix(color6, 33),
+			back_color7 = background.mix(color7, 33),
+
+			-- colors mixed with background
+			-- more perceptual difference from background
+			black_back = color0.mix(background, 33),
+			red_back = color1.mix(background, 33),
+			green_back = color2.mix(background, 33),
+			yellow_back = color3.mix(background, 33),
+			blue_back = color4.mix(background, 33),
+			magenta_back = color5.mix(background, 33),
+			cyan_back = color6.mix(background, 33),
+			white_back = color7.mix(background, 33),
+
+			color0_back = color0.mix(background, 33),
+			color1_back = color1.mix(background, 33),
+			color2_back = color2.mix(background, 33),
+			color3_back = color3.mix(background, 33),
+			color4_back = color4.mix(background, 33),
+			color5_back = color5.mix(background, 33),
+			color6_back = color6.mix(background, 33),
+			color7_back = color7.mix(background, 33),
+
+			-- white with a hint of color
+			-- same pop as white, but just flavored
+			white_black = color7.mix(color0, 33),
+			white_red = color7.mix(color1, 33),
+			white_green = color7.mix(color2, 33),
+			white_yellow = color7.mix(color3, 33),
+			white_blue = color7.mix(color4, 33),
+			white_magenta = color7.mix(color5, 33),
+			white_cyan = color7.mix(color6, 33),
+
+			white_color0 = color7.mix(color0, 33),
+			white_color1 = color7.mix(color1, 33),
+			white_color2 = color7.mix(color2, 33),
+			white_color3 = color7.mix(color3, 33),
+			white_color4 = color7.mix(color4, 33),
+			white_color5 = color7.mix(color5, 33),
+			white_color6 = color7.mix(color6, 33),
+
+			-- color brightened with white
+			-- standout more...?
+			black_white = color0.mix(color7, 33),
+			red_white = color1.mix(color7, 33),
+			green_white = color2.mix(color7, 33),
+			yellow_white = color3.mix(color7, 33),
+			blue_white = color4.mix(color7, 33),
+			magenta_white = color5.mix(color7, 33),
+			cyan_white = color6.mix(color7, 33),
+
+			color0_white = color0.mix(color7, 33),
+			color1_white = color1.mix(color7, 33),
+			color2_white = color2.mix(color7, 33),
+			color3_white = color3.mix(color7, 33),
+			color4_white = color4.mix(color7, 33),
+			color5_white = color5.mix(color7, 33),
+			color6_white = color6.mix(color7, 33),
+
+			-- colors desaturated with "grey"
+			-- grey is foreground + background mix 50
+			-- supposed to have less emphasis and pop
+			red_grey = color1.mix(grey, 33),
+			green_grey = color2.mix(grey, 33),
+			yellow_grey = color3.mix(grey, 33),
+			blue_grey = color4.mix(grey, 33),
+			magenta_grey = color5.mix(grey, 33),
+			cyan_grey = color6.mix(grey, 33),
+
+			color1_grey = color1.mix(grey, 33),
+			color2_grey = color2.mix(grey, 33),
+			color3_grey = color3.mix(grey, 33),
+			color4_grey = color4.mix(grey, 33),
+			color5_grey = color5.mix(grey, 33),
+			color6_grey = color6.mix(grey, 33),
 
 			-- Harsh variants, blend with bright black
-			harsh_red = color8.mix(color9, 10).saturate(10).darken(40),
-			harsh_green = color8.mix(color10, 10).saturate(10).darken(40),
-			harsh_yellow = color8.mix(color11, 10).saturate(10).darken(40),
-			harsh_blue = color8.mix(color12, 10).saturate(10).darken(40),
-			harsh_magenta = color8.mix(color13, 10).saturate(10).darken(40),
-			harsh_cyan = color8.mix(color14, 10).saturate(10).darken(40),
+			red_harsh = color8.mix(color9, 70).saturate(10).darken(40),
+			green_harsh = color8.mix(color10, 70).saturate(10).darken(40),
+			yellow_harsh = color8.mix(color11, 70).saturate(10).darken(40),
+			blue_harsh = color8.mix(color12, 70).saturate(10).darken(40),
+			magenta_harsh = color8.mix(color13, 70).saturate(10).darken(40),
+			cyan_harsh = color8.mix(color14, 70).saturate(10).darken(40),
+
+			color9_harsh = color8.mix(color9, 70).saturate(10).darken(40),
+			color10_harsh = color8.mix(color10, 70).saturate(10).darken(40),
+			color11_harsh = color8.mix(color11, 70).saturate(10).darken(40),
+			color12_harsh = color8.mix(color12, 70).saturate(10).darken(40),
+			color13_harsh = color8.mix(color13, 70).saturate(10).darken(40),
+			color14_harsh = color8.mix(color14, 70).saturate(10).darken(40),
 
 			-- Else...
-			grey = color0.mix(color7, 30), -- Darker mid-grey
-			br_grey = color8.mix(color15, 65), -- Mid-grey
+			grey = grey,
+			back_grey = grey.mix(background, 50), -- Darker grey
+			br_grey = grey.mix(foreground, 50), -- Mid-grey
+
 			orange = color1.mix(color3, 50),
 			purple = color4.rotate(65).li(45), -- Purple
 			pink = color4.rotate(65).li(45).mix(color5, 50), -- Pink
