@@ -11,24 +11,25 @@ return lush(function(injected_functions)
 		sym("@function")({ fg = colors.color5 }),
 		sym("@function.builtin")({ fg = colors.color5 }),
 		sym("@function.macro")({ fg = colors.color5 }),
+		sym("@constant.macro")({ fg = colors.color5 }),
 
 		-- nouns
 		sym("@variable")({ fg = colors.color3 }),
 		sym("@variable.builtin")({ fg = colors.color3 }),
 		sym("@property")({ fg = colors.color3 }),
 
-		sym("@string")({ fg = colors.color3_back }),
-		sym("@string.escape")({ fg = colors.color3_back }),
-		sym("@string.regex")({ fg = colors.color3_back }),
-		sym("@string.special")({ fg = colors.color3_back }),
+		-- raw data
+		sym("@string")({ fg = colors.color2 }),
+		sym("@string.escape")({ fg = colors.color2 }),
+		sym("@string.regex")({ fg = colors.color2 }),
+		sym("@string.special")({ fg = colors.color2 }),
 
-		sym("@number")({ fg = colors.color3_back }),
-		sym("@number.float")({ fg = colors.color3_back }),
+		sym("@number")({ fg = colors.color2 }),
+		sym("@number.float")({ fg = colors.color2 }),
 
-		sym("@constant")({ fg = colors.color3_back }),
-		sym("@constant.builtin")({ fg = colors.color3_back }),
-		sym("@constant.macro")({ fg = colors.color3_back }),
-		sym("@boolean")({ fg = colors.color3_back }),
+		sym("@constant")({ fg = colors.color2 }),
+		sym("@constant.builtin")({ fg = colors.color2 }),
+		sym("@boolean")({ fg = colors.color2 }),
 
 		sym("@attribute")({ fg = colors.color4, gui = "bold" }),
 
@@ -39,7 +40,7 @@ return lush(function(injected_functions)
 		sym("@type.definition")({ fg = colors.color2 }),
 
 		-- context
-		sym("@comment")({ fg = colors.color6_back, gui = "italic" }),
+		sym("@comment")({ fg = colors.color6, gui = "italic" }),
 		sym("@string.documentation")({ fg = colors.color6 }),
 
 		sym("@namespace")({ fg = colors.color2 }),
@@ -47,7 +48,7 @@ return lush(function(injected_functions)
 		sym("@preproc")({ fg = colors.color2 }),
 
 		-- puncuation
-		sym("@keyword")({ fg = colors.color9 }),
+		sym("@keyword")({ fg = colors.color1 }),
 		sym("@keyword.function")({ fg = colors.color1 }),
 		sym("@keyword.operator")({ fg = colors.color1 }),
 
@@ -55,9 +56,9 @@ return lush(function(injected_functions)
 		sym("@tag.attribute")({ fg = colors.color1 }),
 		sym("@tag.delimiter")({ fg = colors.color1 }),
 
-		sym("@punctuation.bracket")({ fg = colors.color1_back }),
-		sym("@punctuation.delimiter")({ fg = colors.color1_back }),
-		sym("@punctuation.special")({ fg = colors.color1_back, gui = "bold" }),
+		sym("@punctuation.bracket")({ fg = colors.color3 }),
+		sym("@punctuation.delimiter")({ fg = colors.color3 }),
+		sym("@punctuation.special")({ fg = colors.color3, gui = "bold" }),
 
 		-- other
 		sym("@text")({ fg = colors.white }),

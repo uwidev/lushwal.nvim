@@ -56,13 +56,13 @@ local scheme = lush(function()
 		Error({ fg = colors.red, bg = colors.color6 }), -- TS: @error
 		ErrorMsg({ fg = colors.red, bg = colors.background }), -- TS: @error
 		Exception({ fg = colors.red }), -- TS: @exception
-		-- Special({ bg = colors.cyan }), -- TS: constructor
+		Special({ fg = colors.color7 }), -- TS: constructor
 
 		-- === Diff / Git ===
-		DiffAdd({ fg = colors.green, bg = colors.green_back, gui = "bold" }), -- TS: @text.diff.add
-		DiffDelete({ fg = colors.background, bg = colors.red_back, gui = "bold" }), -- TS: @text.diff.delete
-		DiffChange({ fg = colors.back_white, bg = colors.blue_back }), -- TS: @text.diff.change
-		DiffText({ fg = colors.cyan, bg = colors.cyan_back }), -- TS: @text.diff.text
+		DiffAdd({ fg = colors.green, bg = colors.back_color1, gui = "bold" }), -- TS: @text.diff.add
+		DiffDelete({ fg = colors.background, bg = colors.back_color3, gui = "bold" }), -- TS: @text.diff.delete
+		DiffChange({ fg = colors.back_white, bg = colors.back_color2 }), -- TS: @text.diff.change
+		DiffText({ fg = colors.cyan, bg = colors.back_color4 }), -- TS: @text.diff.text
 		DiffFile({ fg = colors.red, bg = colors.background }), -- TS: diff file
 		DiffNewFile({ fg = colors.green, bg = colors.background }), -- TS: diff new file
 		DiffLine({ fg = colors.blue, bg = colors.background }), -- TS: diff line

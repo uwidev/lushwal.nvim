@@ -15,8 +15,14 @@ local function generate_colors()
 	-- Generate Color Variables:
 	if ok then
 		local foreground = hsl(colors.special.foreground)
+
 		local background = not require("lushwal").config.transparent_background and hsl(colors.special.background)
 			or nil
+
+		-- local background = hsl("#020100")
+	
+		print(background)
+
 		local cursor = hsl(colors.special.cursor)
 		local color0 = hsl(colors.colors.color0)
 		local color1 = hsl(colors.colors.color1)

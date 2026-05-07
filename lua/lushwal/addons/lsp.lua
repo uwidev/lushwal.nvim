@@ -12,9 +12,11 @@ return lush(function(injected_functions)
 
 		sym("@lsp.type.namespace")({ fg = colors.color2 }),
 
-		sym("@lsp.mod.readonly")({ fg = colors.color3_back }),
+		sym("@lsp.mod.readonly")({ fg = colors.color3 }),
 
-		sym("@lsp.mod.declaration")({ fg = colors.color15 }),
+		sym("@lsp.typemod.function.declaration")({ fg = colors.color7 }),
+		sym("@lsp.typemod.variable.declaration")({ fg = colors.color3 }),
+		sym("@lsp.type.struct")({ fg = colors.color7 }),
 
 		-- sym("@lsp.typemod.method.declaration")({ gui = "bold" }),
 		-- sym("@lsp.typemod.function.declaration")({ gui = "bold" }),
